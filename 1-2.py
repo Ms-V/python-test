@@ -1,0 +1,5 @@
+print("test","is working!!!!")
+print(100+444)
+print("100+444=",100+444)
+fs=input()
+print(fs)
