@@ -110,7 +110,7 @@ for i in range(0,15,1):
     elif i>9:
         app[i]['cl']='black'
         app[i]['sd']=3
-        app[i]['p']=2
+        app[i]['p']=3
 for a in range(0,len(app),1):
     print(app[a])
 print('\n')
