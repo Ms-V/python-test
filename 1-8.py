@@ -164,6 +164,7 @@ while av:
             if rec.lower()=='exit' or rec.lower()=='e':
                 lc=False
                 av=False
+                continue
             elif rec.lower()=='rename' or rec.lower()=='r':
                 break
             else:
