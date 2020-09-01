@@ -68,3 +68,43 @@ with open('taks2.txt','r') as name2:#这就很讨厌，a模式不能读，他妈
     allname=name2.readlines()
 for na in allname:
     print(na.strip())
+
+try:#测试,你懂吧
+    print(5/0)
+except ZeroDivisionError:#如果不出错跳过！
+    print("Can't do that")
+
+while True:
+    fnum=input('n1:')
+    if fnum=='q':
+        break
+    snum=input('n2:')
+    if snum=='q':
+        break
+    print(str(int(fnum)/int(snum)))
+
+while True:
+    fnum=input('n1:')
+    if fnum=='q':
+        break
+    snum=input('n2:')
+    if snum=='q':#套娃使劲套
+        break
+    else:
+        try:
+            int(fnum)/int(snum)#简直天才！这也可以做判定的，连函数都省了
+        except ZeroDivisionError:
+            print('N2 can not was 0')
+        else:
+            print(str(int(fnum)/int(snum)))
+
+fn='task3.txt'
+try:
+    with open(fn) as t3:
+        cp=t3.readline()
+except FileNotFoundError:
+    print(fn+' is not find')
+else:
+    with open(fn) as t3:
+        cp=t3.readline()
+        print(cp)
