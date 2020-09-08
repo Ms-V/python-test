@@ -108,3 +108,75 @@ else:
     with open(fn) as t3:
         cp=t3.readline()
         print(cp)
+
+def cout_w(fn):
+    try:
+        with open(fn,'r',encoding='utf-8') as t3:#应为是中文系统有时候会提示unicode编码错误,所以转下码
+            cp=t3.read()
+    except FileNotFoundError:
+        print(fn+' is not find')
+    else:
+        words=cp.split()
+        numall=len(words)
+        print("The file "+fn+' has about '+str(numall)+' long~~~~')
+fn=['Alice’s Adventures in Wonderland.txt','bzingga.txt','taks.txt','taks2.txt']
+for fname in fn:
+    cout_w(fname)
+
+def cout_w(fn):
+    try:
+        with open(fn,'r',encoding='utf-8') as t3:
+            cp=t3.read()
+    except FileNotFoundError:
+        pass#这样失败了不会反馈
+    else:
+        words=cp.split()
+        numall=len(words)
+        print("The file "+fn+' has about '+str(numall)+' long~~~~')
+fn=['Alice’s Adventures in Wonderland.txt','bzingga.txt','taks.txt','taks2.txt']
+for fname in fn:
+    cout_w(fname)
+
+def addnum(n1,n2):
+    try:
+        nall=int(n1)+int(n2)
+    except ValueError:
+        print('The '+n1+' or '+n2+' is not number!')
+    else:
+        nall=int(n1)+int(n2)
+        return nall
+def inputnum():
+    n1=input('Input n1:')
+    if n1=='q':
+        exit()
+    n2=input('Input n2:')
+    if n2=='q':
+        exit()
+    n=addnum(n1,n2)
+    print(str(n))
+while True:
+    inputnum()
+
+def openfile(fn):
+    try:
+        with open(fn,'r',encoding='utf-8') as fopen:
+            pf=fopen.read()
+    except FileNotFoundError:
+        pass
+    else:
+        with open(fn,'r',encoding='utf-8') as fopen:
+            print('\n'+fn+' line is:')
+            for line in fopen:
+                print(line.rstrip())
+filename=['sp.txt','mp.txt']
+for fn in filename:
+    openfile(fn)
+
+def cunta(wd):
+    with open('Alice’s Adventures in Wonderland.txt','r',encoding='utf-8') as fo:
+        f=fo.read()
+        ct=f.lower().count(wd)
+        print('The world have '+str(ct))
+cw=['alice','the']
+for wo in cw:
+    cunta(wo)
