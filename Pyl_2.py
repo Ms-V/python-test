@@ -26,3 +26,14 @@ print(jl)
 jl=dir(pw)#这个是查看其他模块，前提是必须improt了一个整个模块，from不行from
 #是只导入了模块里的某个对象
 print(jl)
+
+an=1
+exec(open('Pyl_1.py',encoding='utf-8').read())#这是exec模式打开一个模块，他与import不
+#同的是他不会真正的导入模块，而是把源码把拷贝过来来执行
+print(an)
+an=an+an
+print(an)
+exec(open('Pyl_1.py',encoding='utf-8').read())
+print(an)
+ss='print(an)'#拷贝ss
+exec(ss)#执行ss
