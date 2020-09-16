@@ -1,17 +1,17 @@
-# import os
-# import sys
-# print('gbg'*5)
-# pathpy=os.getcwd()#查看当前系统python路径，今天python的path出毛病了，用这个看了下重新设置
-# #了下path没用，最后还是重新装了遍就好了
-# print(pathpy)
-# print(sys.platform)#查看系统平台
-# for x in 'naizi!':
-# 	print(x)
+import os
+import sys
+print('gbg'*5)
+pathpy=os.getcwd()#查看当前系统python路径，今天python的path出毛病了，用这个看了下重新设置
+#了下path没用，最后还是重新装了遍就好了
+print(pathpy)
+print(sys.platform)#查看系统平台
+for x in 'naizi!':
+	print(x)
 
-# # from imp import reload as rl #这个是导入一个重置模块
-# # rl(xxxxxxx)#重置，这两个命令时在IDLE里导入了一个模块（就是文件）时，重载
-# # 在IDLE中第一次import文件会自动运行，之后就不行了，需要reload才行，此外也可以更
-# # 改后reload刷新代码，但是！！！！！！！！！IMP模块被弃用了
+# from imp import reload as rl #这个是导入一个重置模块
+# rl(xxxxxxx)#重置，这两个命令时在IDLE里导入了一个模块（就是文件）时，重载
+# 在IDLE中第一次import文件会自动运行，之后就不行了，需要reload才行，此外也可以更
+# 改后reload刷新代码，但是！！！！！！！！！IMP模块被弃用了
 
 a='dada'
 b='lkaf'
