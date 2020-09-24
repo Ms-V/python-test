@@ -48,7 +48,7 @@ print(random.choice(player))
 
 #字符串有不可变性，以下代码来解释字符串在python中的不可变性
 s='Angela'
-#S[0]='a' #这样会报错哟，就是不支持指定修改
+#s[0]='a' #这样会报错哟，就是不支持指定修改
 s='a'+s[1:]#这就行
 print(s)
 
@@ -186,7 +186,28 @@ print(p5['job'])
 print(p5['job'][0])#字典嵌套列表这么引用
 p5['job'].append('BiuBiuBiu!')
 print(p5)
-if 'job' not in p4:
+if 'job' not in p4:#判定元素在不在字典里，如果没有旧打印missing
 	print('Access is missing')
 if 'job' not in p5:
 	print('Access is missing')
+v1=p5.get('hn','Not find')#同样是判定，如果没有在字典里找到value1,就返回value2
+v2=p5.get('job','Not find')
+print(v1)
+print(v2)
+print(p5)
+for k in sorted(p5):#因为字典不是有序的，输出是不会按照顺序来，所以用sorted函数排序
+	print(k,' is ',p5[k])
+
+nums1=[]
+for x in [1,2,3,4,5,6,7,8,9]:
+	nums1.append(x**3)
+print(nums1)
+
+t1=(1,2,3,4,5)#一个元组，就是个元素不可修改的列表
+#t1[0]=0#这样会报错
+t1+(6,7)#添加是没事的
+t2=[1,2,3,4,5]#列表就没问题
+t2[0]=0
+pt1=t1.index(3)
+pt2=t1.count(1)
+print(pt1,pt2)
